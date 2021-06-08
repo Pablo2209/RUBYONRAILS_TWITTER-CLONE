@@ -20,6 +20,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'sqlite3', '~> 1.4', group: :development
 #gema postgresql 
 gem 'pg', group: :production
+#Gema devise
+gem 'devise', git: 'git://github.com/plataformatec/devise.git'
 
 
 # Use CoffeeScript for .coffee assets and views
