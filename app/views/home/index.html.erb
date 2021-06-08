@@ -1,6 +1,6 @@
 <!--Para validar que el usuario esta registrado y mostrar el mensaje de bienvenida con el nombre, email etc.-->
 <% if user_signed_in? %>
-    <h1>Bienvenido <%= current_user.email %> </h1>
+    <h1>Bienvenido <%= current_user.name %> </h1>
 <% else %>
     <h1>Ningun usuario registrado</h1>
 <% end %>
