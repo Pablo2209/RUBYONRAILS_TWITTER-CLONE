@@ -22,6 +22,14 @@ gem 'sqlite3', '~> 1.4', group: :development
 gem 'pg', group: :production
 #Gema devise
 gem 'devise', git: 'git://github.com/plataformatec/devise.git'
+#inspeccion del codigo para visualizar errores
+gem 'better_errors', '~> 2.9', '>= 2.9.1', group: :development
+#Se utiliza para la automatizacion de tareas
+gem 'guard', '~> 2.17', group: :development
+#Actualiza automaticamente las vistas del navegador al actulizar el codigo
+gem 'guard-livereload', '~> 2.5', '>= 2.5.2', require: false, group: :development
+#Para tener un avatar de imagen
+gem 'gravatar_image_tag', '~> 1.2'
 
 
 # Use CoffeeScript for .coffee assets and views
