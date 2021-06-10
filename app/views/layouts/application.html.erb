@@ -37,9 +37,8 @@
         </ul>
 
         <!--Configuracion de los botones para iniciar, salir y registrarme utilizando la gema devise-->
-        <form class=" form-inline my-2 my-lg-0">
+        <form id="botones" class=" form-inline my-2 my-lg-0">
           <li class="btn btn-outline mr-sm-2">
-
             <%= link_to 'Tweet', new_tweet_path, :class => 'btn btn-success' %>
         </li>
           <% if user_signed_in?%>

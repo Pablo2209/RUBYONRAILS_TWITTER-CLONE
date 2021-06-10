@@ -28,6 +28,8 @@ gem 'guard', '~> 2.17', group: :development
 gem 'guard-livereload', '~> 2.5', '>= 2.5.2', require: false, group: :development
 #Para tener un avatar de imagen
 gem 'gravatar_image_tag', '~> 1.2'
+#Genera formularios simples
+gem 'simple_form', '~> 5.1'
 
 
 # Use CoffeeScript for .coffee assets and views
