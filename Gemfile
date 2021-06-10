@@ -34,6 +34,8 @@ gem 'simple_form', '~> 5.1'
 gem 'kaminari'
 #Integraciones CSS y otros
 gem 'bulma', '~> 0.1.0'
+#Iconos
+gem 'font-awesome-rails', '~> 4.3'
 
 
 # Use CoffeeScript for .coffee assets and views
