@@ -15,7 +15,9 @@
     <!--NAVBAR para twitter-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 
-      <a class="navbar-brand" href="#">Twitter</a>
+        <%= link_to 'Twitter',  root_path, :class => 'navbar-brand  '  %>
+    
+      </div>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -36,7 +38,11 @@
 
         <!--Configuracion de los botones para iniciar, salir y registrarme utilizando la gema devise-->
         <form class=" form-inline my-2 my-lg-0">
-          <%- if user_signed_in?%>
+          <li class="btn btn-outline mr-sm-2">
+
+            <%= link_to 'Tweet', new_tweet_path, :class => 'btn btn-success' %>
+        </li>
+          <% if user_signed_in?%>
             <li class="btn btn-outline my-2 my-sm-0  ">
               <%= link_to 'Salir', destroy_user_session_path, method: :delete, :class => 'btn btn-success'  %>
              </li>
@@ -55,7 +61,9 @@
     <div class="container">     
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
-      <%= yield %>
+
+            <%= yield %>
+
     </div>
     <!--Alertas generadas copiadas y pegadas desde el detalle de la gema devise-->
 
