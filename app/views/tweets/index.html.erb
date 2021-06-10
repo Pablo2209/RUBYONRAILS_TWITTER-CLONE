@@ -1,11 +1,20 @@
-<section class="section">
-    <div class="container">
-        <div class="columns">
-          <%= render 'feed' %>
-        </div>
-    </div>
-</section>
-<!--
+
+<% if user_signed_in?%>
+  <section class="section">
+      <div class="container">
+          <div class="columns">
+            <%= render 'feed' %>
+          </div>
+      </div>
+  </section>
+<% end %>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Twitter</th>
+    </tr>
+  </thead>
   <tbody>
     <% @tweets.each do |tweet| %>
       <tr>
@@ -18,7 +27,4 @@
   </tbody>
 </table>
 
-<br>
 
-<%= link_to 'New Tweet', new_tweet_path %>
--->

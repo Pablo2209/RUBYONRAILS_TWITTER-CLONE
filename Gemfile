@@ -30,6 +30,8 @@ gem 'guard-livereload', '~> 2.5', '>= 2.5.2', require: false, group: :developmen
 gem 'gravatar_image_tag', '~> 1.2'
 #Genera formularios simples
 gem 'simple_form', '~> 5.1'
+#Compaginar paginas
+gem 'kaminari'
 
 
 # Use CoffeeScript for .coffee assets and views
