@@ -32,6 +32,8 @@ gem 'gravatar_image_tag', '~> 1.2'
 gem 'simple_form', '~> 5.1'
 #Compaginar paginas
 gem 'kaminari'
+#Integraciones CSS y otros
+gem 'bulma', '~> 0.1.0'
 
 
 # Use CoffeeScript for .coffee assets and views
