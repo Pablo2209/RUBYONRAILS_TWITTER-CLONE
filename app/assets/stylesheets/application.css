@@ -12,12 +12,17 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
  */
  @import "bulma";
 
- @import "font-awesome";
+
 
  .botones 
  {
      color: white;
+ }
+
+ img.izquierda{
+    position: relative;
  }
