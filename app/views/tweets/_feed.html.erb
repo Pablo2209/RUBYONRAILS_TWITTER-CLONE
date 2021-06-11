@@ -1,4 +1,4 @@
-<div class="card" style="width: 40rem;">
+<div class="card" style="width: 35rem; height: 19rem;">
   <div class="card-body">
     <div class="column ">
       <article class="media box">
@@ -10,7 +10,7 @@
         <div class="media-content">
           <div class="content">
             <p>
-              <strong>John Smith</strong> <small>@johnsmith</small> <small>31m</small>
+              <strong>Wakanda</strong> <small>@johnsmith</small> <small>31m</small>
               <br>
               <%= render 'tweets/form'%>
             </p>
@@ -34,7 +34,8 @@
   </div>
 </div>
 
-<% @tweets.each do |tweet| %>
+<div class="column">
+  <% @tweets.each do |tweet| %>
   <div class="box">
     <article class="media">
         <div class="media-left">
@@ -43,7 +44,7 @@
           </figure>
         </div>
         <div class="media-content">
-          <strong> Pablo Chavez</strong>
+          <strong>wakandiano</strong>
           <br>
           <small>@PCD</small>
           <br>
@@ -71,3 +72,7 @@
     </article>
   </div>
   <% end %>
+  <!--Codigo para mostrar el compaginador de Kaminari-->
+  <%= paginate @tweets %>
+</div>
+
