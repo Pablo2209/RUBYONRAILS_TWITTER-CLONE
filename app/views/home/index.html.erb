@@ -2,6 +2,7 @@
 <div class="text-center">
     <% if user_signed_in? %>
          <h1>Bienvenido <%= current_user.name %> </h1>
+         
     <% else %>
         <h1>Ningun usuario registrado</h1>
     <% end %>
