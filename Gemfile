@@ -27,7 +27,7 @@ gem 'guard', '~> 2.17', group: :development
 #Actualiza automaticamente las vistas del navegador al actulizar el codigo
 gem 'guard-livereload', '~> 2.5', '>= 2.5.2', require: false, group: :development
 #Para tener un avatar de imagen
-gem 'gravatar_image_tag', '~> 1.2'
+gem 'gravatar_image_tag'
 #Genera formularios simples
 gem 'simple_form', '~> 5.1'
 #Compaginar paginas

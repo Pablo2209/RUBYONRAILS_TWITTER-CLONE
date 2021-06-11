@@ -266,7 +266,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise!
   font-awesome-rails (~> 4.3)
-  gravatar_image_tag (~> 1.2)
+  gravatar_image_tag
   guard (~> 2.17)
   guard-livereload (~> 2.5, >= 2.5.2)
   jbuilder (~> 2.5)
