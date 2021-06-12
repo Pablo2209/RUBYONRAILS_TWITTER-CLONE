@@ -7,13 +7,11 @@
           </div>
       </div>
   </section>
-<% end %>
-
-
+  <% else %>  
 
 <div class="column">
   <% @tweets.each do |tweet| %>
-  <div class="box">
+ <div class="box">
     <article class="media">
         <div class="media-left">
           <figure class="image is-128x128">
@@ -21,13 +19,14 @@
           </figure>
         </div>
         <div class="media-content">
-          <!--POr la asociacions de User y Tweets ya podemos enlazar los datos-->
+        <!--POr la asociacions de User y Tweets ya podemos enlazar los datos-->
           <strong> <%= tweet.user.name %> </strong>
           <br>
           <small> <%= tweet.user.email %>  </small>
           <br>
           <p><%= tweet.tweet %></p>
         </div>
+
         <% if user_signed_in?%>
           <nav class="level">
             <div class="level-left is-mobile">
@@ -52,6 +51,10 @@
     </article>
   </div>
   <% end %>
-  <!--Codigo para mostrar el compaginador de Kaminari-->
+    <!--Codigo para mostrar el compaginador de Kaminari-->
   <%= paginate @tweets %>
 </div>
+
+<% end %>
+
+
