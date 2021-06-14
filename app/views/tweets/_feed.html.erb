@@ -15,19 +15,6 @@
               <%= render 'tweets/form'%>
             </p>
           </div>
-          <nav class="level is-mobile">
-            <div class="level-left">
-              <a class="level-item">
-                <span class="icon is-small"><i class="far fa-thumbs-up"></i></span>
-              </a>
-              <a class="level-item">
-                <span class="icon is-small"><i class="fas fa-retweet"></i></span>
-              </a>
-              <a class="level-item">
-                <span class="icon is-small"><i class="fas fa-heart"></i></span>
-              </a>
-            </div>
-          </nav>
         </div>
       </article>
     </div> 
@@ -56,8 +43,7 @@
         <% if user_signed_in?%>
           <nav class="level">
             <div class="level-left is-mobile">
-              <span class="icon is-small"><i class="far fa-thumbs-up"></i></span>
-
+              <!---->
               <%= link_to tweet, class: "level-item" do %>
                 <span class="icon">
                   <i class="fa fa-link" aria-hidden="true"></i>
@@ -72,10 +58,23 @@
                 <span class="icon">
                   <i class="fas fa-trash" aria-hidden="true" ></i>
                 </span>
-              <% end %>
+                <% end %>
+                <span>
+                  <p>
+                    <%= @tweet.likes.count %> <%= (@tweet.likes.count) == 1 ? 'likes' : 'likes'%>
+                    <% pre_like = @tweet.likes.find { |like| like.user_id == current_user.id }%>
+                    <% if pre_like %>
+                      <%= button_to 'unlike', tweet_like_path(@tweet, pre_like), method: :delete %>
+                    <% else %>
+                      <%= button_to 'like', tweet_likes_path(tweet), method: :tweet %>
+                      <% end %>
+                      <% end %>
+                  </p>
+                
+                </span>
             </div>
           </nav>
-        <% end %>
+
     </article>
   </div>
   <% end %>
