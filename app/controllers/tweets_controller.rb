@@ -1,7 +1,11 @@
 class TweetsController < ApplicationController
   before_action :set_tweet, only: %i[ show edit update destroy ]
 
-
+  def likes
+    @tweet = Tweet.all.find(params[:id])
+    Like.create(user_id: current_user.id, tweet_id: @tweet.id)
+    redirect_to tweets_path(@tweet), notice: 'Liked!'
+  end
 
 
   # GET /tweets or /tweets.json

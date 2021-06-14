@@ -1,6 +1,6 @@
 class LikesController < ApplicationController
     def create
-      likes = {user_id: @user, tweet_id: @ss}
+
         if already_liked?
             flash[:notice] = "you cant"
         else
@@ -32,4 +32,3 @@ class LikesController < ApplicationController
       @like = @tweet.likes.find(params[:id])
     end
   end
-  
